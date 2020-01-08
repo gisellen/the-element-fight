@@ -1,7 +1,6 @@
 # the-element-fight
 
-This project is an extension from "Rock, Paper, Scissors"
-"The Element Fight" is a game that focuses on choosing the right element and damage the player.
+"The Element Fight" is a game that focuses on choosing the right element and damage the player. This project is an extension from "Rock, Paper, Scissors".
 
 The damage that is taken will be based on this image: 
 
