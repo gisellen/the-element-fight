@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Unica+One&display=swap');
+
+.header{
+    font-family: 'Unica One', sans-serif;
+    text-align: center;
+    color: white;
+}
+div.center{
+    display: block;
+    text-align: center;
+}
+
+.description{
+    color: white;
+    text-align: center;
+    font-family: 'raleway', sans-serif;
+    font-size: 12px;
+}
+
+.sidebar{
+    top: 70px;
+    text-align: center;
+}
+
+.sidebar a{
+    font-size: 15px;
+    text-decoration: none;
+    font-family: 'raleway', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.sidebar a:hover{
+    color: red;
+    transition: 0.5s;
+}
+
+.button{
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    height: 60px;
+    font-family: sans-serif;
+    margin: 5px;
+}
+
+.button1:hover{
+    background-color: red;
+}
+.button2:hover{
+    background-color: skyblue;
+}
+.button3:hover{
+    background-color: lightgreen;
+}
+.button4:hover{
+    background-color: brown;
+}
+.button5:hover{
+    background-color: goldenrod;
+}
+.button6:hover{
+    background-color: #624B94;
+}
+button:hover{
+    cursor: help;
+    padding: 20px 30px;
+    color: white;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#user{
+    position: absolute;
+}
+
+#computer{
+    position: absolute;
+    right:0px;
+}
+
+.output{
+    outline: 1px solid white ;
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+}
