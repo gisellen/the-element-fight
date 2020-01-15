@@ -9,3 +9,4 @@ The damage that is taken will be based on this image:
 Reference taken from GRANBLUE FANTASY game.
 
 The image shows a chart that determines which elements are vulnerable from other elements. For example, if PLAYER 1 chooses fire, and PLAYER 2 chooses wind, then PLAYER 1 will have a super effective damage to PLAYER 2 because of the element PLAYER 2 chose.
+If PLAYER 1 chose fire and PLAYER 2 chose water, then PLAYER 1's damange will not be as effective.
