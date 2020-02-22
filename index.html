@@ -5,13 +5,13 @@
     <meta name="description" content="Roughly 155 characters">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body bgcolor="black">
+<body bgcolor = "black">
     <p class = header> THE ELEMENT FIGHT 
     
     <!-- headerlinks -->
     <div class = sidebar>
         <a href="#">home</a>
-        <a href="the-element-fight/rules.html"> rules </a>
+        <a href="rules.html"> rules </a>
         <a href="#"> credits </a>
     </div>
     </p>
@@ -28,10 +28,21 @@
         <button class = "button button6"> DARK </button>
     </div>
     <div class = output>
-        <div id = user > player </div>
-        <div id = computer> computer </div>
+        <div class = user > player </div>
+        <p class = user >0</p>
+        <progress id = health1 value="100" max="100"></progress>
+        <div class = computer> computer </div>
+        <p class = computer>0</p>
+        <progress id = health2 value="100" max="100"></progress>
+        <div id = text> 
+        </div> <!-- note to self: when it reaches 740 px, PUSH OTHER ELEMENTS AWAY -->
     </div>
-    <script src = script.js></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <div id = reset>
+    <button onclick="reset()"> reset </button>
+    </div>
+    <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src = "js/jquery-3.4.1.js"></script>
+    <script src = js/script.js></script>
+    <script src = "js/script2.js"></script>
 </body>
 </html>
