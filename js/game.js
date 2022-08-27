@@ -23,34 +23,17 @@ function score() {
 	the score will change the numbers in the html */
 }
 
-function attack(playerSelection, computerSelection) {
-  /* this function will calculate the damage each player will take against each other */
-
-}
-
-// ATTACKS
-function superEffectiveAttack(user){
-  if(user == "Computer"){
-    let newVal = $("#health2").val() - 200;
+// ATTACK
+function attackComputer(damage){
+    let newVal = $("#health2").val() - damage;
     $("#health2").val(newVal)
     $(`#computerHealth`).text(newVal);
-  } else {
-    let newVal = $("#health1").val() - 200;
-    $("#health1").val(newVal)
-    $(`#userHealth`).text(newVal);
-  }
 }
 
-function notEffectiveAttack(user){ //breakpoint
-  if(user == "Computer"){
-    let newVal = $("#health2").val() - 50;
-    $("#health2").val(newVal)
-    $(`#computerHealth`).text(newVal);
-  } else {
-    let newVal = $("#health1").val() - 50;
+function attackPlayer(damage){
+    let newVal = $("#health1").val() - damage;
     $("#health1").val(newVal)
     $(`#userHealth`).text(newVal);
-  }
 }
 
 /* this will reset health, score, and text */
@@ -77,9 +60,9 @@ function addText(user, elementChosen) {
   scrollDown();
 }
 
-function addAttackText(user) {
+function addAttackText(user, text) {
   let para = document.createElement("p");
-  let node = document.createTextNode(`${user}'s attack is super effective! `);
+  let node = document.createTextNode(`${user}'s attack is ${text} `);
   para.appendChild(node);
   let element = document.getElementById("text");
   element.appendChild(para);
@@ -100,13 +83,23 @@ $(`.fire`).click(() => {
   addText("Player", elementChosen);
   computerSelection = computerPlay();
   playerSelection = elementChosen;
+
   if(computerSelection == "Wind"){ //super effective
-    superEffectiveAttack("Computer")
-    addAttackText("Player")
-  } else if (ComputerSelection == "Water"){ //least effective
-
+    attackComputer(200)
+    attackPlayer(50)
+    addAttackText("Player", "is super effective!")
+    addAttackText("Computer", "is not effective...")
+  } else if (computerSelection == "Water"){ //least effective
+    attackComputer(50)
+    attackPlayer(200)
+    addAttackText("Computer", "is super effective!")
+    addAttackText("Player", "is not effective...")
+  } else { //elements are neutral attacks between each other
+    attackPlayer(100)
+    attackComputer(100)
+    addAttackText("Computer", "is neutral.")
+    addAttackText("Player", "is neutral.")
   }
-
 });
 
 $(`.water`).click(() => {
@@ -114,9 +107,21 @@ $(`.water`).click(() => {
   addText("Player", elementChosen);
   computerSelection = computerPlay();
   playerSelection = elementChosen;
-  if(computerSelection == "Fire"){
-    superEffectiveAttack("Computer")
-    addAttackText("Player")
+  if(computerSelection == "Fire"){ //super effective
+    attackComputer(200)
+    attackPlayer(50)
+    addAttackText("Player", "is super effective!")
+    addAttackText("Computer", "is not effective...")
+  } else if (computerSelection == "Earth"){ //least effective
+    attackComputer(50)
+    attackPlayer(200)
+    addAttackText("Computer", "is super effective!")
+    addAttackText("Player", "is not effective...")
+  } else { //elements are neutral attacks between each other
+    attackPlayer(100)
+    attackComputer(100)
+    addAttackText("Computer", "is neutral.")
+    addAttackText("Player", "is neutral.")
   }
 });
 
@@ -125,9 +130,21 @@ $(`.wind`).click(() => {
   addText("Player", elementChosen);
   computerSelection = computerPlay();
   playerSelection = elementChosen;
-  if(computerSelection == "Earth"){
-    superEffectiveAttack("Computer")
-    addAttackText("Player")
+  if(computerSelection == "Earth"){ //super effective
+    attackComputer(200)
+    attackPlayer(50)
+    addAttackText("Player", "is super effective!")
+    addAttackText("Computer", "is not effective...")
+  } else if (computerSelection == "Fire"){ //least effective
+    attackComputer(50)
+    attackPlayer(200)
+    addAttackText("Computer", "is super effective!")
+    addAttackText("Player", "is not effective...")
+  } else { //elements are neutral attacks between each other
+    attackPlayer(100)
+    attackComputer(100)
+    addAttackText("Computer", "is neutral.")
+    addAttackText("Player", "is neutral.")
   }
 });
 
@@ -136,9 +153,21 @@ $(`.earth`).click(() => {
   addText("Player", elementChosen);
   computerSelection = computerPlay();
   playerSelection = elementChosen;
-  if(computerSelection == "Water"){
-    superEffectiveAttack("Water")
-    addAttackText("Player")
+  if(computerSelection == "Water"){ //super effective
+    attackComputer(200)
+    attackPlayer(50)
+    addAttackText("Player", "is super effective!")
+    addAttackText("Computer", "is not effective...")
+  } else if (computerSelection == "Wind"){ //least effective
+    attackComputer(50)
+    attackPlayer(200)
+    addAttackText("Computer", "is super effective!")
+    addAttackText("Player", "is not effective...")
+  } else { //elements are neutral attacks between each other
+    attackPlayer(100)
+    attackComputer(100)
+    addAttackText("Computer", "is neutral.")
+    addAttackText("Player", "is neutral.")
   }
 });
 
@@ -147,9 +176,16 @@ $(`.light`).click(() => {
   addText("Player", elementChosen);
   computerSelection = computerPlay();
   playerSelection = elementChosen;
-  if(computerSelection == "Dark"){
-    superEffectiveAttack("Computer")
-    addAttackText("Player")
+  if(computerSelection == "Dark"){ //super effective
+    attackComputer(200)
+    attackPlayer(200)
+    addAttackText("Player", "is super effective!")
+    addAttackText("Computer", "is super effective!")
+  } else { //elements are neutral attacks between each other
+    attackPlayer(100)
+    attackComputer(100)
+    addAttackText("Computer", "is neutral.")
+    addAttackText("Player", "is neutral.")
   }
 });
 
@@ -158,9 +194,16 @@ $(`.dark`).click(() => {
   addText("Player", elementChosen);
   computerSelection = computerPlay();
   playerSelection = elementChosen;
-  if(computerSelection == "Light"){
-    superEffectiveAttack("Computer")
-    addAttackText("Player")
+  if(computerSelection == "Light"){ //super effective
+    attackComputer(200)
+    attackPlayer(200)
+    addAttackText("Player", "is super effective!")
+    addAttackText("Computer", "is super effective!")
+  } else { //elements are neutral attacks between each other
+    attackPlayer(100)
+    attackComputer(100)
+    addAttackText("Computer", "is neutral.")
+    addAttackText("Player", "is neutral.")
   }
 });
 /* button functions end */
