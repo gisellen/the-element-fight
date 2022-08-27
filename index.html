@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
     <title> THE ELEMENT FIGHT! </title>
     <meta name="description" content="Roughly 155 characters">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body bgcolor = "black">
-    <p class = header> THE ELEMENT FIGHT 
-    
-    <!-- headerlinks -->
-    <div class = sidebar>
-        <a href="#">home</a>
-        <a href="rules.html"> rules </a>
-        <a href="#"> credits </a>
-    </div>
+
+<body bgcolor="black">
+    <p class=header> THE ELEMENT FIGHT
+
+        <!-- headerlinks -->
+        <div class=nav>
+            <a href="#">home</a>
+            <a href="rules.html"> rules </a>
+        </div>
     </p>
-    <div class = center>
-        <img src = "https://media1.tenor.com/images/d52486969a2e2e1440a04469561b4107/tenor.gif?itemid=15176943" height="70px" width="70px">
+    <div class=center>
+        <img src="https://media1.tenor.com/images/d52486969a2e2e1440a04469561b4107/tenor.gif?itemid=15176943"
+            height="70px" width="70px">
     </div>
-    <p class = description> Choose your element </p>
-    <div class = button>
-        <button class = "button button1"> FIRE </button>
-        <button class = "button button2"> WATER </button>
-        <button class = "button button3"> WIND </button>
-        <button class = "button button4"> EARTH </button> 
-        <button class = "button button5"> LIGHT </button>
-        <button class = "button button6"> DARK </button>
+    <p class=description> Choose your element </p>
+    <div class=button>
+        <button class="button fire"> FIRE </button>
+        <button class="button water"> WATER </button>
+        <button class="button wind"> WIND </button>
+        <button class="button earth"> EARTH </button>
+        <button class="button light"> LIGHT </button>
+        <button class="button dark"> DARK </button>
     </div>
-    <div class = output>
-        <div class = user > player </div>
-        <p class = user >0</p>
-        <progress id = health1 value="100" max="100"></progress>
-        <div class = computer> computer </div>
-        <p class = computer>0</p>
-        <progress id = health2 value="100" max="100"></progress>
-        <div id = text> 
+    <div class=output>
+        <div class=user> player
+            <p id=userHealth>1000</p>
+            <progress id=health1 value="1000" max="1000"></progress>
+        </div>
+
+        <div id=text>
         </div> <!-- note to self: when it reaches 740 px, PUSH OTHER ELEMENTS AWAY -->
+        <div class=computer> computer
+            <p id=computerHealth>1000</p>
+            <progress id=health2 value="1000" max="1000"></progress>
+        </div>
     </div>
-    <div id = reset>
-    <button onclick="reset()"> reset </button>
+    <div id=reset>
+        <button onclick="reset()"> reset </button>
     </div>
-    <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src = "js/jquery-3.4.1.js"></script>
-    <script src = js/script.js></script>
-    <script src = "js/script2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/game.js"></script>
 </body>
+
 </html>

@@ -4,8 +4,10 @@
 .header{
     font-family: 'Unica One', sans-serif;
     text-align: center;
+    font-size: 30px;
     color: white;
 }
+
 div.center{
     display: block;
     text-align: center;
@@ -18,12 +20,12 @@ div.center{
     font-size: 12px;
 }
 
-.sidebar{
+.nav{
     top: 70px;
     text-align: center;
 }
 
-.sidebar a{
+.nav a{
     font-size: 15px;
     text-decoration: none;
     color: white;
@@ -32,7 +34,7 @@ div.center{
     font-family: 'raleway', sans-serif;
 }
 
-.sidebar a:hover{
+.nav a:hover{
     color: red;
     transition: 0.5s;
 }
@@ -47,24 +49,25 @@ div.center{
     height: 60px;
     font-family: sans-serif;
     margin: 5px;
+    transition: 0.2s;
 }
 
-.button1:hover{
+.fire:hover{
     background-color: red;
 }
-.button2:hover{
+.water:hover{
     background-color: skyblue;
 }
-.button3:hover{
+.wind:hover{
     background-color: lightgreen;
 }
-.button4:hover{
-    background-color: brown;
+.earth:hover{
+    background-color: rgb(133, 105, 78);
 }
-.button5:hover{
+.light:hover{
     background-color: goldenrod;
 }
-.button6:hover{
+.dark:hover{
     background-color: #624B94;
 }
 .button:hover{
@@ -72,10 +75,10 @@ div.center{
     padding: 20px 30px;
     color: white;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
-.user{
+#userHealth{
     position: absolute;
     font-family: 'raleway', sans-serif;
     background: red;
@@ -83,7 +86,7 @@ div.center{
     border-radius: 3px;
 }
 
-.computer{
+#computerHealth{
     position: absolute;
     right: 20px;
     font-family: 'raleway', sans-serif;
@@ -121,9 +124,8 @@ p.computer{
 
 #text{
     text-align: center;
-    max-width: 300px;
-    margin: auto;
     height: 400px;
+    width: 300px;
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -142,6 +144,8 @@ p.computer{
 }
 
 .output{
+    display: flex;
+    justify-content: space-between;
     outline: 1px solid white ;
     width: 700px;
     height: 400px;
